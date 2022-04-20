@@ -1,0 +1,8 @@
+$black: #000;
+$white: #fff;
+
+@mixin mobile (){
+    @media (max-width:600px) {
+        @content;
+    }
+}

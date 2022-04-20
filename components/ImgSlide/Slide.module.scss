@@ -1,0 +1,150 @@
+@import 'mix';
+.slider {
+    position: relative;
+    display: -webkit-box;
+    justify-content: center;
+    align-items: center;
+    @include mobile(){
+      display: block;
+    }
+    .slide {
+      opacity: 0;
+      transition-duration: 1s ease;
+    }  
+    .slide.active {
+      opacity: 1;
+      transition-duration: 1s;
+      transform: scale(1.08);
+    }
+   
+    .slide_section{
+      width: 50%;
+      @include mobile(){
+        width: 100%;
+        margin: -15px;
+      }
+    }
+    .wrap_reviews{
+      background: $black;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      width: 50%;
+      height: 99.9vh;
+      @include mobile(){
+        width: 100%;
+      }
+      h5.review_t{
+        color: $white;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: capitalize;
+        margin-top: 35px;
+      }
+      h6.review_n{
+        color: $white;
+        font-size: 14px;
+        font-weight: 400;
+        position: relative;
+        text-transform: capitalize;
+        &::before{
+          content: "";
+          width: 5px;
+          height: 2px;
+          background: $white;
+          display: block;
+          position: absolute;
+          right: 57%;
+          top: 8px;
+          text-transform: capitalize;
+        }
+      }
+      .b_reviews{
+        margin: 1.5em 10px;
+        padding: 0.5em 10px;
+        position: relative;
+        &::before{
+          color: $white;
+          content: open-quote;
+          font-size: 50px;
+          line-height: .1em;
+          margin-right: 0.25em;
+          position: absolute;
+          width: 100%;
+          left: 0;
+          top: 3px;
+        }
+      }
+      .p_reviews{
+        color: $white;
+        text-align: center;
+        // padding: 35px;
+        line-height: 25px;
+        font-size: 16px;
+        display: inline;
+      }
+      
+      .title_reviews{
+        font-size: 22px;
+        color: $white;
+        position: relative;
+        text-align: center;
+        @include mobile(){
+          font-size: 35px;
+          &::before{
+            width: 135px !important;
+            top: 45px !important;
+          }
+        }
+        &:before{
+          content: '';
+          border-bottom: 5px solid $white;
+          position: absolute;
+          width: 85px;
+          top: 30px;
+        }
+      }
+      .wrap_arrow{
+        span.icon_left{
+          color: $white;
+          font-size: 25px;
+          position: absolute;
+          left: 10px;
+          top: 25%;
+          @include mobile(){
+            top: 25%;
+          }
+        }
+        span.icon_right{
+          color: $white;
+          font-size: 25px;
+          position: absolute;
+          right: 10px;
+          top: 25%;
+          @include mobile(){
+            top: 25%;
+          }
+        }
+      }
+
+      .wrap_dot{
+        display: flex;
+        margin: auto;
+        width: max-content;
+        span.dot_item{
+          height: 20px;
+          background: $white;
+          width: 20px;
+          display: block;
+          border-radius: 100%;
+          border: 1px solid $white;
+            &.active{
+                background: $black;  
+            }
+        }
+    }
+
+    } 
+
+  }
+  
